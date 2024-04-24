@@ -1,235 +1,134 @@
-<!DOCTYPE html>
-<html>
 
-<head>
-  <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="Towards Uncertainty-Aware Language Agent"/>
-  <meta property="og:description" content="Uncertainty-Aware Language Agent (UALA)"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+<!-- saved from url=(0040)https://nicklashansen.github.io/modemrl/ -->
+<html><head>
+  <link id="favicon" rel="icon" href="./Assets/盾牌.png" sizes="16x16">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>IBProtector 2024</title>
+	<meta property="og:title" content="IBProtector">
+	<meta property="og:description" content="Protecting Your LLMs with Information Bottleneck">
+	<link rel="stylesheet" href="./Config/style.css">
+	<link rel="stylesheet" href="./Config/css">
+	<link rel="stylesheet" href="./Config/font-awesome.min.css">
+<style data-cursor="cursor">body,
+          .cursorsDefault,
+          input[type=range]::-webkit-slider-thumb,
+          input[type=range]::-webkit-slider-runnable-track {
+            cursor: url("data:image/svg+xml;utf8,%3Csvg%20width%3D%2232px%22%20height%3D%2232px%22%20%20%20%20%20%20%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%201024%201024%22%20style%3D%22enable-background%3Anew%200%200%201024%201024%3B%22%20xml%3Aspace%3D%22preserve%22%20%20%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%2365B800%3B%7D.st1%7Bfill%3A%23171717%3B%7D.st2%7Bfill%3A%234D8C00%3B%7D.st3%7Bfill%3A%23E30613%3B%7D.st4%7Bfill%3A%23C90000%3B%7D.st5%7Bfill%3A%23BA0000%3B%7D.st6%7Bfill%3A%23FF2B38%3B%7D.st7%7Bfill%3A%23A80000%3B%7D.st8%7Bfill%3A%23FFFFFF%3B%7D%3C%2Fstyle%3E%3Cg%3E%3Cg%3E%3Cg%3E%3Cpath%20class%3D%22st0%22%20d%3D%22M909.9%2C438.5c48%2C59%2C88.1%2C151.7%2C91.7%2C213.5c11.7%2C197.8-89.2%2C155.5-130.3%2C208.3c-33.8%2C43.5-38.8%2C153.3-247.1%2C139.6c-68.1-4.5-196.6-70.5-243.5-123.2c-209.6-235.4%2C121-355.1%2C121-355.1C551.7%2C376.5%2C721.2%2C206.2%2C909.9%2C438.5z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3Cpath%20class%3D%22st1%22%20d%3D%22M865.8%2C883.8c0%2C0-13.5-17.8%2C4-34.5c22.1-21.1%2C36.8-1.5%2C36.8-1.5l-20.8%2C6.9l-2%2C17.9l-11.7-1.9C869.1%2C875.6%2C865.8%2C883.8%2C865.8%2C883.8z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st2%22%20d%3D%22M944.9%2C489.9c31.2%2C53.5%2C53.9%2C116.2%2C56.6%2C162.1c11.7%2C197.8-89.1%2C155.4-130.2%2C208.4c-26.7%2C34.4-35.5%2C110.4-141.3%2C133.8c0%2C0%2C50.6-26.5%2C75.2-57.6c24.6-30.9%2C26.3-70.4%2C60.9-103.4c28-26.7%2C70.9-35.9%2C94.1-70.4C998%2C706.9%2C992.3%2C584.1%2C944.9%2C489.9z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3Cg%3E%3Cg%3E%3Cpath%20class%3D%22st0%22%20d%3D%22M32.2%2C9.3l492.5%2C514.4c5.9%2C6.1%2C5.6%2C15.7-0.4%2C21.5c-3.6%2C3.4-8.5%2C4.8-13%2C4c-3.1-0.6-6.1-2-8.5-4.4L10.3%2C30.4c-5.9-6.1-5.6-15.7%2C0.4-21.5c4.5-4.4%2C11.2-5.3%2C16.7-3C29.3%2C6.8%2C30.8%2C7.9%2C32.2%2C9.3z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3Cg%3E%3Cpath%20class%3D%22st2%22%20d%3D%22M32.2%2C9.3l492.5%2C514.5c5.7%2C6.1%2C5.6%2C15.7-0.6%2C21.5c-3.6%2C3.4-8.5%2C4.8-13%2C4c-3.1-0.4-6.1-2-8.4-4.4l-0.7-0.7c0.9-0.6%2C1.7-1.1%2C2.4-1.9c6.1-5.7%2C6.3-15.5%2C0.4-21.5L13.1%2C7c4.3-2.8%2C9.7-3.1%2C14.3-1.1C29.3%2C6.8%2C30.8%2C7.9%2C32.2%2C9.3z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3Cg%3E%3Cpath%20d%3D%22M32.2%2C9.3l10.5%2C10.9l-12%2C31.5l-14.4-15L27.4%2C6C29.3%2C6.8%2C30.8%2C7.9%2C32.2%2C9.3z%22%3E%3C%2Fpath%3E%3Cpolygon%20points%3D%2258.8%2C36.9%2073.6%2C52.5%2061.6%2C84%2047.2%2C68.9%20%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%2289.6%2C69.2%20104.4%2C84.8%2092.5%2C116.2%2078%2C101.1%20%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22120.4%2C101.5%20135.3%2C116.9%20123.3%2C148.4%20108.9%2C133.4%20%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22151.2%2C133.7%20166.2%2C149.2%20154.2%2C180.7%20139.8%2C165.7%20%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22182.2%2C165.9%20197%2C181.5%20185.1%2C213%20170.6%2C197.8%20%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22213%2C198.2%20227.9%2C213.7%20215.9%2C245.1%20201.5%2C230.1%20%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22243.8%2C230.4%20258.8%2C245.9%20246.7%2C277.4%20232.4%2C262.4%20%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22274.8%2C262.6%20289.6%2C278.2%20277.7%2C309.6%20263.2%2C294.6%20%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22305.6%2C294.8%20320.4%2C310.4%20308.5%2C341.9%20294%2C326.8%20%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22336.4%2C327.1%20351.4%2C342.6%20339.3%2C374.1%20324.9%2C359%20%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22367.3%2C359.4%20382.2%2C374.8%20370.2%2C406.3%20355.8%2C391.3%20%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22398.2%2C391.5%20413%2C407.1%20401.1%2C438.6%20386.6%2C423.5%20%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22429%2C423.8%20443.9%2C439.4%20431.9%2C470.7%20417.5%2C455.7%20%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22459.9%2C456%20474.8%2C471.5%20462.7%2C503%20448.4%2C488%20%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22490.8%2C488.3%20505.6%2C503.8%20493.7%2C535.3%20479.2%2C520.2%20%22%3E%3C%2Fpolygon%3E%3Cpath%20d%3D%22M521.6%2C520.5l3.1%2C3.3c5.9%2C6.1%2C5.6%2C15.7-0.4%2C21.5c-3.6%2C3.4-8.5%2C4.8-13%2C4L521.6%2C520.5z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fg%3E%3Cg%3E%3Cg%3E%3Cpath%20class%3D%22st2%22%20d%3D%22M486.2%2C788.4c-15.5%2C77.2%2C41.3%2C183.4%2C41.3%2C183.4c50.6-0.3%2C28.3-47.7%2C10.9-82.8c-17.8-35.8-7.4-54.6%2C14.7-57.8c35-5.1%2C128.4%2C170.2%2C188.3%2C109.3C795.1%2C886%2C639.1%2C815.6%2C640%2C748c0.7-56.7%2C65.2-68.2%2C109.7-24.9c48.9%2C47.5%2C98.7%2C41.5%2C123.3%2C12.3c22.9-27.1%2C22.9-79.6-17.9-122.4c-45.7-48.1-61.4-73.3-54-95.5c6.9-20.6%2C31.7-23.2%2C60.6-4.1c30.2%2C20.1%2C52.3%2C41.9%2C65%2C51.3c37.1%2C27.3%2C52.4-3.8%2C52.4-3.8C874.3%2C285.8%2C527.5%2C581.8%2C486.2%2C788.4z%22%3E%3C%2Fpath%3E%3Cg%3E%3Cpath%20class%3D%22st3%22%20d%3D%22M474.2%2C461.8c-26.5%2C74.1-143.3%2C38.8-187.2%2C194.4c-45.3%2C160.7%2C175.4%2C339%2C240.4%2C315.7c65.1-23.4-35.9-90.1-4-134.6c56.1-78.3%2C149.4%2C160.1%2C216.3%2C95.2c37.6-36.5-100.2-109.7-108.7-176.9c-5.6-44%2C28.8-74.3%2C65.2-71.7c19.4%2C1.3%2C50.5%2C20.3%2C72.2%2C40.7c68.2%2C64.2%2C164.1-11.5%2C69.7-115.2c-73.7-80.9-52.2-117-14.8-117.9c57.9-1.3%2C121.4%2C106.4%2C155.6%2C69.5c43.1-46.4-54.6-182.9-154.4-244.5C679.1%2C226.4%2C530.7%2C303.7%2C474.2%2C461.8z%22%3E%3C%2Fpath%3E%3Cg%3E%3Cpath%20class%3D%22st4%22%20d%3D%22M503.1%2C400.8c0.8%2C39.7-2.7%2C60-18.9%2C87.3c-17.9%2C30.1-61%2C45.9-86.8%2C35.2c34.1-16.7%2C65-27.7%2C77-61.5C482.1%2C439.7%2C491.8%2C419.3%2C503.1%2C400.8z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fg%3E%3Cg%3E%3Cpath%20class%3D%22st5%22%20d%3D%22M542.2%2C822.3c-6.6%2C1.9-12.9%2C6.6-18.8%2C14.8c-28.7%2C40.2%2C50.3%2C98.2%2C18.8%2C126.5c9.1-29.7-28.6-63.6-33-91.3C505.4%2C848.5%2C517%2C828.9%2C542.2%2C822.3z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st5%22%20d%3D%22M642.8%2C708.2c-9.3%2C12.4-14.1%2C28.6-11.7%2C47.4c8.2%2C64.5%2C135.9%2C134.8%2C112.3%2C172.5c-1.9-14.1-3.5-26-50.5-68.7C655.1%2C824.8%2C592.1%2C761.8%2C642.8%2C708.2z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st5%22%20d%3D%22M792.1%2C508.1c-8.7%2C18%2C0.3%2C50.9%2C46.1%2C101.2C884%2C659.8%2C885%2C703.6%2C866%2C727.9c-0.1%2C0-0.1%2C0-0.1%2C0s18.2-38.8-12.9-79.2C830%2C619%2C764%2C556.5%2C792.1%2C508.1z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st5%22%20d%3D%22M978.8%2C560.9c0%2C0%2C16.2-31.9-20.6-83.9c-26.4-37.2-122.1-148.2-157-173.5c7.7%2C3.9%2C15.5%2C8.1%2C23.2%2C12.8C924.4%2C378%2C1022.1%2C514.4%2C978.8%2C560.9z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fg%3E%3Cg%3E%3Cpath%20class%3D%22st6%22%20d%3D%22M324.4%2C660.6c-33.9%2C60.2%2C15.7%2C156.9%2C52.3%2C192.8s71%2C5%2C46-27.3c-25.1-32.3-75.2-78.1-74-140.2C349.6%2C641.5%2C336.7%2C638.7%2C324.4%2C660.6z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st6%22%20d%3D%22M663.2%2C327.2c4.9%2C15.2%2C29.6-3.2%2C77.1%2C9.1s84.7%2C54.4%2C102.4%2C38.8c17.7-15.6-50.5-65.3-97.8-73.4C698.5%2C293.8%2C657%2C307.9%2C663.2%2C327.2z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3Cg%3E%3Cg%3E%3Cg%3E%3Cellipse%20transform%3D%22matrix(0.7071%20-0.7071%200.7071%200.7071%20-360.5144%20527.9089)%22%20class%3D%22st7%22%20cx%3D%22457%22%20cy%3D%22699.1%22%20rx%3D%2282.2%22%20ry%3D%2282.2%22%3E%3C%2Fellipse%3E%3Cellipse%20class%3D%22st8%22%20cx%3D%22457%22%20cy%3D%22699.2%22%20rx%3D%2277.9%22%20ry%3D%2277.9%22%3E%3C%2Fellipse%3E%3Ccircle%20class%3D%22st3%22%20cx%3D%22457%22%20cy%3D%22699.1%22%20r%3D%2260.2%22%3E%3C%2Fcircle%3E%3Cellipse%20transform%3D%22matrix(0.3827%20-0.9239%200.9239%200.3827%20-364.0423%20853.8813)%22%20cx%3D%22456.9%22%20cy%3D%22699.4%22%20rx%3D%2238.8%22%20ry%3D%2238.8%22%3E%3C%2Fellipse%3E%3Cpath%20class%3D%22st8%22%20d%3D%22M465.3%2C669.4c5.1%2C5.3%2C4.9%2C13.7-0.4%2C18.8c-5.3%2C5.1-13.7%2C4.9-18.8-0.4c-5.1-5.3-4.9-13.7%2C0.4-18.8C451.8%2C663.9%2C460.2%2C664.1%2C465.3%2C669.4z%22%3E%3C%2Fpath%3E%3Cg%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M424.2%2C662.6c3%2C3.2%2C4.9%2C6.3%2C4.2%2C7c-0.7%2C0.7-3.8-1.3-6.7-4.5c-3-3.2-4.9-6.3-4.2-7C418.1%2C657.5%2C421.2%2C659.5%2C424.2%2C662.6z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M416.1%2C672c3.8%2C2.3%2C6.3%2C4.9%2C5.7%2C5.6c-0.6%2C0.8-4-0.3-7.6-2.7c-3.8-2.3-6.3-4.9-5.7-5.6C408.9%2C668.4%2C412.3%2C669.6%2C416.1%2C672z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M410.5%2C683c4.2%2C1.3%2C7.3%2C3.1%2C7.1%2C4.1c-0.3%2C0.9-3.9%2C0.7-8.1-0.7c-4.2-1.3-7.3-3.1-7.1-4.1C402.7%2C681.3%2C406.4%2C681.7%2C410.5%2C683z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M407.9%2C695c4.4%2C0.2%2C7.8%2C1.2%2C7.8%2C2.2c0%2C1-3.6%2C1.5-8%2C1.3c-4.4-0.2-7.8-1.2-7.8-2.2C400%2C695.4%2C403.5%2C694.8%2C407.9%2C695z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M408.4%2C707.4c4.3-0.9%2C8-0.8%2C8.1%2C0.2c0.2%2C1-3.1%2C2.4-7.4%2C3.3s-8%2C0.8-8.1-0.2C400.7%2C709.7%2C404.1%2C708.2%2C408.4%2C707.4z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M411.9%2C719.2c4-1.9%2C7.5-2.8%2C7.8-1.9c0.4%2C0.9-2.4%2C3.1-6.4%2C5c-4%2C1.9-7.5%2C2.8-7.8%2C1.9C405.1%2C723.3%2C407.9%2C721.1%2C411.9%2C719.2z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M418.2%2C729.9c3.3-2.9%2C6.5-4.5%2C7.2-3.8c0.7%2C0.8-1.5%2C3.6-4.9%2C6.4c-3.3%2C2.9-6.5%2C4.5-7.2%2C3.8C412.7%2C735.5%2C414.9%2C732.6%2C418.2%2C729.9z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M426.9%2C738.5c2.5-3.5%2C5.2-6%2C6.1-5.4c0.8%2C0.6-0.7%2C3.9-3.2%2C7.5c-2.5%2C3.5-5.2%2C6-6.1%2C5.4C423.1%2C745.4%2C424.4%2C742%2C426.9%2C738.5z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M437.6%2C744.8c1.5-4.1%2C3.5-7.1%2C4.5-6.7c0.9%2C0.3%2C0.3%2C4-1.2%2C8.1c-1.5%2C4.1-3.5%2C7.1-4.5%2C6.7C435.5%2C752.4%2C436.1%2C748.9%2C437.6%2C744.8z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M449.5%2C748.1c0.6-4.3%2C1.7-7.7%2C2.7-7.6s1.3%2C3.8%2C0.9%2C8.1c-0.6%2C4.3-1.7%2C7.7-2.7%2C7.6S449%2C752.5%2C449.5%2C748.1z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M461.8%2C748.4c-0.6-4.3-0.3-8%2C0.7-8.1c1-0.1%2C2.2%2C3.3%2C2.8%2C7.6c0.6%2C4.3%2C0.3%2C8-0.7%2C8.1C463.7%2C756.1%2C462.5%2C752.7%2C461.8%2C748.4z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M473.9%2C745.7c-1.7-4.1-2.2-7.6-1.3-8c0.9-0.3%2C3%2C2.7%2C4.6%2C6.6c1.7%2C4.1%2C2.2%2C7.6%2C1.3%2C8C477.6%2C752.7%2C475.5%2C749.7%2C473.9%2C745.7z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M484.8%2C740c-2.7-3.5-4.1-6.9-3.3-7.4c0.8-0.6%2C3.5%2C1.8%2C6.1%2C5.3c2.7%2C3.5%2C4.1%2C6.9%2C3.3%2C7.4C490.2%2C745.9%2C487.5%2C743.6%2C484.8%2C740z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M494.1%2C731.8c-3.4-2.8-5.6-5.6-5.1-6.4c0.7-0.8%2C3.9%2C0.9%2C7.3%2C3.6c3.4%2C2.8%2C5.6%2C5.6%2C5.1%2C6.4C500.7%2C736.1%2C497.5%2C734.5%2C494.1%2C731.8z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M501%2C721.6c-4-1.8-6.9-4-6.4-4.9c0.4-0.9%2C4-0.1%2C8%2C1.7c4%2C1.9%2C6.9%2C4%2C6.4%2C4.9C508.5%2C724.1%2C504.9%2C723.3%2C501%2C721.6z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M505.2%2C709.9c-4.3-0.8-7.6-2.2-7.5-3.1c0.2-1%2C3.8-1.1%2C8.1-0.3c4.3%2C0.8%2C7.6%2C2.2%2C7.5%2C3.1C513%2C710.5%2C509.4%2C710.6%2C505.2%2C709.9z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M506.2%2C697.6c-4.3%2C0.3-8-0.2-8.1-1.2c-0.1-1%2C3.4-2%2C7.7-2.3c4.3-0.3%2C8%2C0.2%2C8.1%2C1.2C514%2C696.3%2C510.6%2C697.3%2C506.2%2C697.6z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M504.2%2C685.4c-4.2%2C1.4-7.7%2C1.8-8.1%2C0.9c-0.3-0.9%2C2.8-2.8%2C7-4.2s7.7-1.8%2C8.1-0.9C511.5%2C682.1%2C508.4%2C684%2C504.2%2C685.4z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M499.2%2C674.1c-3.6%2C2.4-7.1%2C3.6-7.6%2C2.9c-0.6-0.8%2C2-3.4%2C5.6-5.7c3.6-2.4%2C7.1-3.6%2C7.6-2.9C505.5%2C669.1%2C503%2C671.7%2C499.2%2C674.1z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M491.6%2C664.3c-3%2C3.2-6%2C5.3-6.6%2C4.6c-0.7-0.7%2C1.1-3.8%2C4.1-7s6-5.3%2C6.6-4.6C496.4%2C658%2C494.6%2C661.1%2C491.6%2C664.3z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M481.8%2C656.8c-2.1%2C3.9-4.4%2C6.6-5.3%2C6.2s0.1-4%2C2.2-7.8c2.1-3.9%2C4.4-6.6%2C5.3-6.2S483.9%2C652.9%2C481.8%2C656.8z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M470.5%2C652.1c-1%2C4.2-2.7%2C7.5-3.6%2C7.3c-1-0.2-0.9-3.9%2C0.2-8.1c1-4.2%2C2.7-7.5%2C3.6-7.3C471.6%2C644.1%2C471.5%2C647.8%2C470.5%2C652.1z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M458.2%2C650.2c0%2C4.4-0.7%2C8-1.7%2C8s-1.8-3.5-1.9-7.8c0-4.4%2C0.7-8%2C1.7-8C457.4%2C642.2%2C458.2%2C645.8%2C458.2%2C650.2z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M445.9%2C651.4c1.1%2C4.2%2C1.3%2C7.8%2C0.3%2C8.1c-0.9%2C0.2-2.7-3-3.8-7.2c-1.1-4.2-1.3-7.8-0.3-8.1C443.2%2C643.9%2C444.8%2C647.1%2C445.9%2C651.4z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M434.3%2C655.6c2.1%2C3.8%2C3.2%2C7.3%2C2.3%2C7.7s-3.3-2.2-5.4-6.1c-2.1-3.8-3.2-7.3-2.3-7.7C429.8%2C649.1%2C432.2%2C651.8%2C434.3%2C655.6z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M486.9%2C687.5c4.8%2C11.9%2C2%2C26.2-7.8%2C35.7c-13%2C12.5-33.8%2C12-46.4-1c-4.8-5-7.6-10.9-8.6-17.2c1.5%2C3.9%2C3.8%2C7.5%2C6.9%2C10.7c12.5%2C13.1%2C33.3%2C13.6%2C46.4%2C1C485.4%2C709%2C488.7%2C697.9%2C486.9%2C687.5z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3Cg%3E%3Ccircle%20class%3D%22st7%22%20cx%3D%22712.2%22%20cy%3D%22454.8%22%20r%3D%2282.2%22%3E%3C%2Fcircle%3E%3Cellipse%20class%3D%22st8%22%20cx%3D%22712.2%22%20cy%3D%22454.8%22%20rx%3D%2277.9%22%20ry%3D%2277.9%22%3E%3C%2Fellipse%3E%3Ccircle%20class%3D%22st3%22%20cx%3D%22712.2%22%20cy%3D%22454.8%22%20r%3D%2260.2%22%3E%3C%2Fcircle%3E%3Cellipse%20transform%3D%22matrix(0.7071%20-0.7071%200.7071%200.7071%20-113.1757%20636.8492)%22%20cx%3D%22712.2%22%20cy%3D%22455%22%20rx%3D%2238.8%22%20ry%3D%2238.8%22%3E%3C%2Fellipse%3E%3Cpath%20class%3D%22st8%22%20d%3D%22M720.4%2C425c5.1%2C5.3%2C4.9%2C13.7-0.4%2C18.8c-5.3%2C5.1-13.7%2C4.9-18.8-0.4c-5.1-5.3-4.9-13.7%2C0.4-18.8C706.9%2C419.6%2C715.4%2C419.7%2C720.4%2C425z%22%3E%3C%2Fpath%3E%3Cg%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M679.4%2C418.3c3%2C3.2%2C4.9%2C6.3%2C4.2%2C7c-0.7%2C0.7-3.8-1.3-6.7-4.5c-3-3.2-4.9-6.3-4.2-7C673.3%2C413.1%2C676.4%2C415.2%2C679.4%2C418.3z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M671.3%2C427.5c3.8%2C2.3%2C6.3%2C4.9%2C5.7%2C5.6c-0.6%2C0.8-4-0.3-7.6-2.7c-3.8-2.3-6.3-4.9-5.7-5.6C664.2%2C424.1%2C667.6%2C425.3%2C671.3%2C427.5z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M665.7%2C438.6c4.2%2C1.3%2C7.3%2C3.1%2C7.1%2C4.1c-0.3%2C0.9-3.9%2C0.7-8.1-0.7c-4.2-1.3-7.3-3.1-7.1-4.1C658%2C437%2C661.6%2C437.3%2C665.7%2C438.6z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M663.1%2C450.6c4.4%2C0.2%2C7.8%2C1.2%2C7.8%2C2.2s-3.6%2C1.5-8%2C1.3c-4.4-0.2-7.8-1.2-7.8-2.2C655.2%2C451.1%2C658.7%2C450.4%2C663.1%2C450.6z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M663.6%2C463c4.3-0.9%2C8-0.8%2C8.1%2C0.2c0.2%2C1-3.1%2C2.4-7.4%2C3.3c-4.3%2C0.9-8%2C0.8-8.1-0.2C656%2C465.3%2C659.3%2C463.9%2C663.6%2C463z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M667%2C474.8c4-1.9%2C7.5-2.8%2C7.8-1.9c0.4%2C0.9-2.4%2C3.1-6.4%2C5c-4%2C1.9-7.5%2C2.8-7.8%2C1.9C660.3%2C479%2C663.2%2C476.8%2C667%2C474.8z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M673.4%2C485.4c3.3-2.9%2C6.5-4.5%2C7.2-3.8c0.7%2C0.8-1.5%2C3.6-4.9%2C6.4c-3.3%2C2.9-6.5%2C4.5-7.2%2C3.8C667.9%2C491.2%2C670.1%2C488.3%2C673.4%2C485.4z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M682.2%2C494.2c2.5-3.5%2C5.2-6%2C6.1-5.4c0.8%2C0.6-0.7%2C3.9-3.2%2C7.5c-2.5%2C3.6-5.2%2C6-6.1%2C5.4C678.2%2C501%2C679.6%2C497.7%2C682.2%2C494.2z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M692.9%2C500.4c1.5-4.1%2C3.5-7.1%2C4.5-6.7c0.9%2C0.3%2C0.3%2C4-1.2%2C8.1c-1.5%2C4.1-3.5%2C7.1-4.5%2C6.7C690.8%2C508.1%2C691.3%2C504.4%2C692.9%2C500.4z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M704.7%2C503.8c0.6-4.3%2C1.7-7.7%2C2.7-7.6c1%2C0.1%2C1.3%2C3.8%2C0.9%2C8.1c-0.6%2C4.3-1.7%2C7.7-2.7%2C7.6C704.6%2C511.7%2C704.3%2C508.1%2C704.7%2C503.8z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M717.1%2C504.1c-0.6-4.3-0.3-8%2C0.7-8.1c1-0.1%2C2.2%2C3.3%2C2.8%2C7.6c0.6%2C4.3%2C0.3%2C8-0.7%2C8.1C719%2C511.8%2C717.6%2C508.4%2C717.1%2C504.1z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M729.1%2C501.3c-1.7-4.1-2.2-7.6-1.3-8c0.9-0.3%2C3%2C2.7%2C4.6%2C6.6c1.7%2C4.1%2C2.2%2C7.6%2C1.3%2C8C732.9%2C508.3%2C730.8%2C505.3%2C729.1%2C501.3z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M740.1%2C495.7c-2.7-3.5-4.1-6.9-3.3-7.4s3.5%2C1.8%2C6.1%2C5.3c2.7%2C3.5%2C4.1%2C6.9%2C3.3%2C7.4C745.5%2C501.6%2C742.7%2C499.1%2C740.1%2C495.7z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M749.4%2C487.4c-3.4-2.8-5.6-5.6-5.1-6.4c0.7-0.8%2C3.9%2C0.9%2C7.3%2C3.6s5.6%2C5.6%2C5.1%2C6.4C756%2C491.8%2C752.7%2C490.2%2C749.4%2C487.4z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M756.2%2C477.2c-4-1.8-6.9-4-6.4-4.9c0.4-0.9%2C4-0.1%2C8%2C1.7c4%2C1.9%2C6.9%2C4%2C6.4%2C4.9C763.7%2C479.8%2C760.2%2C479%2C756.2%2C477.2z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M760.3%2C465.5c-4.3-0.8-7.6-2.2-7.5-3.1c0.2-1%2C3.8-1.1%2C8.1-0.3c4.3%2C0.8%2C7.6%2C2.2%2C7.5%2C3.1C768.2%2C466.2%2C764.6%2C466.3%2C760.3%2C465.5z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M761.4%2C453.3c-4.3%2C0.3-8-0.2-8.1-1.2s3.4-2%2C7.7-2.3c4.3-0.3%2C8%2C0.2%2C8.1%2C1.2C769.2%2C451.8%2C765.8%2C453%2C761.4%2C453.3z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M759.4%2C441c-4.2%2C1.4-7.7%2C1.8-8.1%2C0.9c-0.3-0.9%2C2.8-2.8%2C7-4.2c4.2-1.4%2C7.7-1.8%2C8.1-0.9C766.7%2C437.8%2C763.6%2C439.7%2C759.4%2C441z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M754.4%2C429.7c-3.6%2C2.4-7.1%2C3.6-7.6%2C2.9c-0.6-0.8%2C2-3.4%2C5.6-5.7c3.6-2.4%2C7.1-3.6%2C7.6-2.9C760.7%2C424.8%2C758.1%2C427.4%2C754.4%2C429.7z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M746.8%2C420c-3%2C3.2-6%2C5.3-6.6%2C4.6c-0.7-0.7%2C1.1-3.8%2C4.1-7c3-3.2%2C6-5.3%2C6.6-4.6C751.7%2C413.7%2C749.8%2C416.8%2C746.8%2C420z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M737.1%2C412.5c-2.1%2C3.9-4.4%2C6.6-5.3%2C6.2c-0.9-0.4%2C0.1-4%2C2.2-7.8c2.1-3.9%2C4.4-6.6%2C5.3-6.2C740.1%2C405.2%2C739.1%2C408.6%2C737.1%2C412.5z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M725.7%2C407.7c-1%2C4.2-2.7%2C7.5-3.6%2C7.3c-1-0.2-0.9-3.9%2C0.2-8.1c1-4.2%2C2.7-7.5%2C3.6-7.3C726.8%2C399.8%2C726.7%2C403.5%2C725.7%2C407.7z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M713.4%2C405.8c0%2C4.4-0.7%2C8-1.7%2C8c-1%2C0-1.8-3.5-1.9-7.8c0-4.4%2C0.7-8%2C1.7-8C712.6%2C397.9%2C713.4%2C401.5%2C713.4%2C405.8z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M701.2%2C407c1.1%2C4.2%2C1.3%2C7.8%2C0.3%2C8.1c-0.9%2C0.2-2.7-3-3.8-7.2c-1.1-4.2-1.3-7.8-0.3-8.1C698.4%2C399.6%2C700.1%2C402.8%2C701.2%2C407z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M689.6%2C411.3c2.1%2C3.8%2C3.2%2C7.3%2C2.3%2C7.7c-0.9%2C0.4-3.3-2.2-5.4-6.1c-2.1-3.8-3.2-7.3-2.3-7.7C685%2C404.8%2C687.5%2C407.4%2C689.6%2C411.3z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M742.2%2C443.2c4.8%2C11.9%2C2%2C26.2-7.8%2C35.7c-13%2C12.5-33.8%2C12-46.4-1c-4.8-5-7.6-10.9-8.6-17.2c1.5%2C3.9%2C3.8%2C7.5%2C6.9%2C10.7c12.5%2C13.1%2C33.3%2C13.6%2C46.4%2C1C740.6%2C464.6%2C743.9%2C453.6%2C742.2%2C443.2z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fg%3E%3Cpath%20d%3D%22M673.1%2C667.4c-52.5%2C50.3-101.4-10.8-101.4-10.8l92.6-88.6C664.4%2C568%2C726.4%2C616.5%2C673.1%2C667.4z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E") 0 0, auto !important;
+          }
 
+          a,
+          button,
+          .cursorsHover,
+          [cursorshover] {
+            cursor: url("data:image/svg+xml;utf8,%3Csvg%20width%3D%2232px%22%20height%3D%2232px%22%20%20%20%20%20%20%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%201024%201024%22%20style%3D%22enable-background%3Anew%200%200%201024%201024%3B%22%20xml%3Aspace%3D%22preserve%22%20%20%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%23E30613%3B%7D.st1%7Bfill%3A%23171717%3B%7D.st2%7Bfill%3A%23BA0000%3B%7D.st3%7Bfill%3A%23AA54FF%3B%7D.st4%7Bfill%3A%237622C9%3B%7D.st5%7Bfill%3A%23542B00%3B%7D.st6%7Bfill%3A%23331A00%3B%7D.st7%7Bfill%3A%23783D00%3B%7D%3C%2Fstyle%3E%3Cg%3E%3Cg%3E%3Cg%3E%3Cpath%20class%3D%22st0%22%20d%3D%22M921.8%2C442.5c48.4%2C59.4%2C88.9%2C152.6%2C92.7%2C214.8c12.1%2C199.2-89.5%2C156.6-130.8%2C210c-34%2C43.9-38.8%2C154.4-248.6%2C140.9c-68.6-4.4-198.1-70.7-245.4-123.6C178.3%2C647.8%2C510.9%2C526.7%2C510.9%2C526.7C561%2C380.6%2C731.4%2C208.8%2C921.8%2C442.5z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3Cpath%20class%3D%22st1%22%20d%3D%22M878.2%2C890.9c0%2C0-13.6-17.9%2C4-34.7c22.2-21.3%2C37.1-1.6%2C37.1-1.6l-21%2C7l-1.9%2C18.1l-11.8-1.9C881.4%2C882.7%2C878.2%2C890.9%2C878.2%2C890.9z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st2%22%20d%3D%22M957.2%2C494.1c31.5%2C53.8%2C54.5%2C117%2C57.2%2C163.1c12.1%2C199.2-89.5%2C156.6-130.8%2C210c-26.9%2C34.7-35.5%2C111.2-142.1%2C134.9c0%2C0%2C50.9-26.8%2C75.7-58.1c24.7-31.2%2C26.3-70.9%2C61.1-104.3c28.1-27%2C71.3-36.2%2C94.7-71C1010.9%2C712.5%2C1005.1%2C589%2C957.2%2C494.1z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3Cg%3E%3Cg%3E%3Cpath%20class%3D%22st3%22%20d%3D%22M37.4%2C11.7l496.7%2C517.2c5.9%2C6.1%2C5.7%2C15.8-0.4%2C21.7c-3.6%2C3.5-8.5%2C4.8-13.1%2C4c-3.2-0.5-6.1-2-8.5-4.5L15.3%2C32.9c-5.9-6.1-5.7-15.8%2C0.4-21.7c4.6-4.4%2C11.2-5.4%2C16.8-3C34.3%2C9.1%2C36%2C10.2%2C37.4%2C11.7z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3Cg%3E%3Cpath%20class%3D%22st4%22%20d%3D%22M37.4%2C11.7l496.7%2C517.2c5.8%2C6.1%2C5.6%2C15.8-0.5%2C21.7c-3.6%2C3.5-8.5%2C4.8-13.1%2C4c-3.2-0.5-6.1-2-8.5-4.4l-0.6-0.7c0.9-0.5%2C1.7-1.1%2C2.4-1.9c6.1-5.8%2C6.3-15.5%2C0.4-21.7L18.2%2C9.4c4.4-2.8%2C9.8-3.1%2C14.4-1.1C34.3%2C9.1%2C36%2C10.2%2C37.4%2C11.7z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3Cg%3E%3Cpath%20d%3D%22M37.4%2C11.7l10.5%2C11l-12%2C31.7L21.4%2C39.2l11.1-31C34.3%2C9.1%2C36%2C10.2%2C37.4%2C11.7z%22%3E%3C%2Fpath%3E%3Cpolygon%20points%3D%2264.1%2C39.5%2079.1%2C55.1%2067%2C86.8%2052.5%2C71.7%20%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%2295.2%2C71.9%20110.2%2C87.5%2098.2%2C119.2%2083.6%2C104.1%20%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22126.3%2C104.3%20141.3%2C119.9%20129.3%2C151.6%20114.8%2C136.5%20%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22157.5%2C136.7%20172.4%2C152.3%20160.4%2C184%20145.9%2C168.9%20%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22188.6%2C169.1%20203.6%2C184.7%20191.6%2C216.4%20177%2C201.3%20%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22219.7%2C201.5%20234.7%2C217.1%20222.7%2C248.9%20208.1%2C233.7%20%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22250.8%2C233.9%20265.8%2C249.6%20253.8%2C281.3%20239.3%2C266.1%20%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22282%2C266.4%20297%2C282%20284.9%2C313.7%20270.4%2C298.5%20%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22313.1%2C298.8%20328.1%2C314.4%20316.1%2C346.1%20301.5%2C330.9%20%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22344.2%2C331.2%20359.2%2C346.8%20347.2%2C378.5%20332.6%2C363.4%20%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22375.3%2C363.6%20390.3%2C379.2%20378.3%2C410.9%20363.8%2C395.8%20%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22406.5%2C396%20421.5%2C411.6%20409.4%2C443.3%20394.9%2C428.2%20%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22437.6%2C428.4%20452.6%2C444%20440.6%2C475.7%20426%2C460.6%20%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22468.7%2C460.8%20483.7%2C476.4%20471.7%2C508.1%20457.1%2C493%20%22%3E%3C%2Fpolygon%3E%3Cpolygon%20points%3D%22499.8%2C493.2%20514.8%2C508.8%20502.8%2C540.6%20488.3%2C525.4%20%22%3E%3C%2Fpolygon%3E%3Cpath%20d%3D%22M531%2C525.6l3.2%2C3.3c5.9%2C6.1%2C5.7%2C15.8-0.4%2C21.7c-3.6%2C3.5-8.5%2C4.8-13.1%2C4L531%2C525.6z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fg%3E%3Cg%3E%3Cg%3E%3Cpath%20class%3D%22st2%22%20d%3D%22M495.6%2C795.5c-15.5%2C77.8%2C41.9%2C184.6%2C41.9%2C184.6c50.9-0.4%2C28.5-48.1%2C10.9-83.4c-17.9-36-7.6-54.9%2C14.7-58.2c35.3-5.2%2C129.5%2C171.2%2C189.8%2C109.8c54-55.1-103.2-125.7-102.4-193.8c0.6-57%2C65.5-68.7%2C110.5-25.2c49.4%2C47.8%2C99.4%2C41.6%2C124.2%2C12.2c23-27.3%2C22.9-80.2-18.3-123.2c-46.1-48.3-62-73.7-54.6-96c6.8-20.7%2C31.9-23.4%2C61-4.2c30.4%2C20.2%2C52.7%2C42.1%2C65.5%2C51.5c37.4%2C27.5%2C52.7-3.9%2C52.7-3.9C885.7%2C288.8%2C537%2C587.4%2C495.6%2C795.5z%22%3E%3C%2Fpath%3E%3Cg%3E%3Cpath%20class%3D%22st5%22%20d%3D%22M483.2%2C466.6c-26.6%2C74.8-144.2%2C39.2-188.2%2C196.1c-45.4%2C161.9%2C177.2%2C341.1%2C242.6%2C317.5c65.5-23.7-36.3-90.6-4.3-135.6c56.4-79%2C150.7%2C161%2C218%2C95.6c37.8-36.7-101.1-110.4-109.8-178c-5.7-44.3%2C28.9-74.8%2C65.6-72.4c19.6%2C1.3%2C50.9%2C20.3%2C72.7%2C40.8c68.8%2C64.5%2C165.2-11.9%2C70-116.1c-74.3-81.3-52.7-117.7-15.1-118.7c58.3-1.4%2C122.4%2C106.9%2C156.8%2C69.8c43.3-46.8-55.2-184-155.8-246C689.1%2C229.3%2C539.8%2C307.3%2C483.2%2C466.6z%22%3E%3C%2Fpath%3E%3Cg%3E%3Cpath%20class%3D%22st6%22%20d%3D%22M512.1%2C405.2c0.8%2C39.9-2.6%2C60.4-18.9%2C87.9c-18%2C30.3-61.3%2C46.3-87.4%2C35.6c34.3-16.8%2C65.4-28%2C77.5-62.1C491%2C444.3%2C500.8%2C423.7%2C512.1%2C405.2z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fg%3E%3Cg%3E%3Cpath%20class%3D%22st6%22%20d%3D%22M552.2%2C829.6c-6.7%2C1.9-13%2C6.7-18.9%2C15c-28.9%2C40.5%2C50.8%2C98.8%2C19.1%2C127.3c9.1-30-28.9-64-33.4-91.9C515.1%2C856%2C526.8%2C836.2%2C552.2%2C829.6z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st6%22%20d%3D%22M653.3%2C714.4c-9.3%2C12.4-14.2%2C28.8-11.8%2C47.8c8.4%2C64.9%2C137.1%2C135.6%2C113.3%2C173.5c-1.9-14.3-3.6-26.1-50.9-69.1C665.8%2C831.9%2C602.3%2C768.5%2C653.3%2C714.4z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st6%22%20d%3D%22M803.3%2C512.7c-8.8%2C18.1%2C0.4%2C51.3%2C46.5%2C101.8c46.3%2C50.7%2C47.3%2C94.8%2C28.2%2C119.3c-0.1%2C0-0.2%2C0-0.2%2C0s18.3-39.1-13.2-79.7C841.7%2C624.4%2C775.2%2C561.5%2C803.3%2C512.7z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st6%22%20d%3D%22M991.5%2C565.6c0%2C0%2C16.3-32.2-20.8-84.5c-26.6-37.5-123.2-149-158.3-174.4c7.8%2C3.8%2C15.6%2C8.1%2C23.4%2C12.9C936.3%2C381.6%2C1034.9%2C518.7%2C991.5%2C565.6z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fg%3E%3Cg%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M332.6%2C667c-34%2C60.7%2C16.1%2C158%2C52.9%2C194s71.5%2C4.9%2C46.2-27.6c-25.3-32.5-76-78.5-74.7-141C357.9%2C647.8%2C344.9%2C645%2C332.6%2C667z%22%3E%3C%2Fpath%3E%3Cpath%20class%3D%22st7%22%20d%3D%22M673.1%2C330.8c4.9%2C15.4%2C29.8-3.3%2C77.7%2C9.1c47.9%2C12.3%2C85.4%2C54.6%2C103.2%2C38.9c17.8-15.7-50.9-65.7-98.6-73.7C708.7%2C297.1%2C666.9%2C311.3%2C673.1%2C330.8z%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E") 0 0, auto !important;
+          }
 
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-  <title>Protecting Your LLMs with Information Bottleneck</title>
-  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
-  <!-- <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet"> -->
-
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
-  <script src="https://kit.fontawesome.com/deb78776bf.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-2 publication-title">Protecting Your LLMs with Information Bottleneck</h1>
+        </style><style id="ar94e88e2a9dstyle">
+                .ar94e88e2a9dhidden{ position:absolute !important; opacity:0 !important; pointer-events:none !important}
+            </style></head>
+<body><div class="header" id="top">
+	 <h1><img src="Assets/盾牌.png" alt="logo" style="width: 80px; height: 80px; margin-right: 20px; margin-bottom: -25px;"><span style="font-weight: bolder;"><span style="letter-spacing: -0px; font-weight: bolder;"></span>Protecting Your LLMs with <img src="Assets/lightning.png" alt="logo" style="width: 20px; height: 40px; margin-right: -1px; margin-bottom: -5px;">nformation Bottleneck</span></h1>
+   <table class="authors">
+    <tbody>
+      <tr>
+        <td>
+          <h4>
+            <span class="authors">
+            <a href="" style="font-weight: bold; color: black">Zichuan Liu</a><sup>1,2</sup> &nbsp;
+            <a href="" style="font-weight: bold; color: black">Zefan Wang</a><sup>3</sup> &nbsp;
+            <a href="" style="font-weight: bold; color: black">Linjie Xu</a><sup>2,4</sup> &nbsp;
+            <a href="" style="font-weight: bold; color: black">Jinyu Wang</a><sup>2</sup> &nbsp;
             <br>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-              <span class="author-block">
-                Zichuan Liu,</span>
-              <span class="author-block">
-                Zefan Wang,</span>
-              <span class="author-block">
-                Linjie Xu,</span>
-              <span class="author-block">
-                Jinyu Wang,</span>
-                <p></p>
-              <span class="author-block">
-                Lei Song,</span>
-               <span class="author-block">
-                Tianchun Wang,</span>
-              <span class="author-block">
-                Chunlin Chen,</span>
-              <span class="author-block">
-                Wei Cheng,</span>
-              <span class="author-block">
-                Jiang Bian</span>
-                </span>
-            </div>
-
-                  <div class="is-size-5 publication-authors">
-                  	<p></p>
-                    <span class="author-block">Nanjing University, Microsoft Research Asia, <br>Tsinghua University, Queen Mary University of London, <br>Pennsylvania State University, NEC Laboratories America
-</span>
-                  </div>
-
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/2404.13968.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- Supplementary Model link -->
-                    <!-- <span class="link-block">
-                      <a href="" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fa-regular fa-box-archive"></i>
-                      </span>
-                      <span>Model</span>
-                    </a>
-                  </span> -->
-
-                    <!-- Supplementary data link -->
-                    <span class="link-block">
-                      <a href="https://github.com/zichuan-liu/IB4LLMs/blob/main/intro_slides_llm.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fa fa-database"></i>
-                      </span>
-                      <span>Slides</span>
-                    </a>
-                  </span>
-
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <a href="https://github.com/zichuan-liu/IB4LLMs" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- ArXiv abstract Link
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span> -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+            <a href="" style="font-weight: bold; color: black">Lei Song</a><sup>2</sup> &nbsp;
+            <a href="" style="font-weight: bold; color: black">Tianchun Wang</a><sup>5</sup> &nbsp;
+            <a href="" style="font-weight: bold; color: black">Chunlin Chen</a><sup>1</sup> &nbsp;
+            <a href="" style="font-weight: bold; color: black">Wei Cheng</a><sup>6</sup> &nbsp;
+            <a href="" style="font-weight: bold; color: black">Jiang Bian</a><sup>2</sup> &nbsp;
+          </span>
+          <span class="authors-affiliation">
+            <br>
+            <sup>1</sup>Nanjing University &nbsp;
+            <sup>2</sup>Microsoft Research Asia &nbsp;
+            <sup>3</sup>Tsinghua University &nbsp;
+            <sup>4</sup>Queen Mary University of London &nbsp;
+            <sup>5</sup>Pennsylvania State University &nbsp;
+            <sup>6</sup>NEC Laboratories America &nbsp;
+          </span>
+        <br>
+        <!--<span class="authors-affiliation">
+      <sup>*</sup><i>Equal contribution. Order is decided by coin flip.</i></span>-->
+                    </h4>
+                    <!--<h3>
+                      <i>Accepted by <a href="https://iclr.cc" style="font-size: larger;font-weight: bolder; color: #c03d3e;">ICLR 2024</a><i>.
+                    </h3>-->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="links" style="margin-top:-1.5%;">
+    <a href="https://arxiv.org/abs/2404.13968" class="btn"><svg id="logomark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74.492 100.25" style="width: 18px; height: 18px;"><g id="tiny_-_white" data-name="tiny - white"><path d="M586.72,255.616a3.377,3.377,0,0,1,.448.031,5.917,5.917,0,0,1,3.581,2.79c.454,1.116.314,2.023-1.315,4.141L563.168,293.6l-8.558-10.047,29.348-26.616a4.406,4.406,0,0,1,2.762-1.321m0-1.5a5.766,5.766,0,0,0-3.69,1.643l-.041.032-.038.035L553.6,282.442l-1.077.977.943,1.107,8.558,10.047,1.145,1.344,1.141-1.348,26.267-31.022.022-.027.022-.028c1.574-2.046,2.327-3.622,1.516-5.619a7.309,7.309,0,0,0-4.779-3.714,5.083,5.083,0,0,0-.64-.043Z" transform="translate(-526.086 -245.559)" fill="#fff"/><path d="M553.423,284.593l8.977,10.558L597.911,337.9c.873,1.093,1.419,2.186,1.047,3.418a4.092,4.092,0,0,1-2.721,2.837,3.557,3.557,0,0,1-1.045.159,4,4,0,0,1-2.687-1.124L548.01,300.808c-3.5-3.5-2.971-8.151.436-11.558l4.977-4.657m.124-2.17L552.4,283.5l-4.976,4.656c-4.192,4.191-4.372,9.816-.473,13.714l44.521,42.4a5.485,5.485,0,0,0,3.722,1.538,5.1,5.1,0,0,0,1.483-.224,5.59,5.59,0,0,0,3.719-3.838,5.176,5.176,0,0,0-1.31-4.788l-35.53-42.767-8.988-10.571-1.019-1.2Z" transform="translate(-526.086 -245.559)" fill="#fff"/><path d="M562.4,295.151l9.556,11.5,5.761-5.356a7.926,7.926,0,0,0,.041-11.743l-43.7-41.923s-1.671-2.029-3.437-2.071a4.49,4.49,0,0,0-4.23,2.718c-.688,1.651-.194,2.809,1.315,4.97l29.306,35.565Z" transform="translate(-526.086 -245.559)" fill="#fff"/><path d="M553.7,306.223l-17.116,21.024c-1.255,1.337-2.032,3.683-1.331,5.367a4.587,4.587,0,0,0,4.287,2.841,4.087,4.087,0,0,0,3.082-1.523l20.328-18.9Z" transform="translate(-526.086 -245.559)" fill="#fff"/><path d="M592.074,250.547" transform="translate(-526.086 -245.559)" fill="#fff" stroke="#000" stroke-miterlimit="10" stroke-width="0.25"/></g></svg>&nbsp;&nbsp;arXiv</a>&nbsp;&nbsp;
+    <a href="https://arxiv.org/pdf/2404.13968.pdf" class="btn"><svg class="svg-inline--fa fa-file-pdf fa-w-12 fa-lg" style="width: 18px; height: 18px;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 500" data-fa-i2svg=""><path fill="currentColor" d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z"></path></svg>&nbsp;&nbsp;Paper</a>&nbsp;&nbsp;
+    <a href="https://twitter.com/c93l6IhoSgV2Iqi/status/1782740791678619688" class="btn"><svg style="width: 18px; height: 18px;" viewBox="0 0 1200 1227" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" fill="white"/>
+    </svg>&nbsp;&nbsp;Twitter</a>&nbsp;&nbsp;
+    <a href="https://github.com/zichuan-liu/IB4LLMs" class="btn"><svg class="svg-inline--fa fa-github fa-w-16" style="width: 18px; height: 18px;" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 -50 484 500" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>&nbsp;&nbsp;Code <span style="font-size: 10px;"></span></a>
   </div>
-</section>
-
-
-<!-- Teaser video-->
-
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-The advent of large language models (LLMs) has revolutionized the field of natural language processing, yet they might be attacked to produce harmful content.
-Despite efforts to ethically align LLMs, these are often fragile and can be circumvented by jailbreaking attacks through optimized or manual adversarial prompts.
-To address this, we introduce the Information Bottleneck Protector (IBProtector),
-a defense mechanism grounded in the information bottleneck principle, and we
-modify the objective to avoid trivial solutions. The IBProtector selectively compresses and perturbs prompts, facilitated by a lightweight and trainable extractor,
-preserving only essential information for the target LLMs to respond with the
-expected answer. Moreover, we further consider a situation where the gradient is
-not visible to be compatible with any LLM. Our empirical evaluations show that
-IBProtector outperforms current defense methods in mitigating jailbreak attempts,
-without overly affecting response quality or inference speed. Its effectiveness
-and adaptability across various attack methods and target LLMs underscore the
-potential of IBProtector as a novel, transferable defense that bolsters the security
-of LLMs without requiring modifications to the underlying models.
-          </p>
-      </div>
-    </div>
+</div>
+<div class="content">
+		<h2>Overview</h2>
+		<p class="abstract">
+			The advent of large language models (LLMs) has revolutionized the field of natural language processing, yet they might be attacked to produce harmful content. Despite efforts to ethically align LLMs, these are often fragile and can be circumvented by jailbreaking attacks through optimized or manual adversarial prompts. To address this, we introduce the <span style="font-weight: bolder; color: #c03d3e;">I</span>nformation <span style="font-weight: bolder; color: #c03d3e;">B</span>ottleneck <span style="font-weight: bolder; color: #c03d3e;">Protector</span> (<span style="font-weight: bolder; color: #c03d3e;">IBProtector</span>), a defense mechanism grounded in the information bottleneck principle, and we modify the objective to avoid trivial solutions. The IBProtector selectively compresses and perturbs prompts, facilitated by a lightweight and trainable extractor, preserving only essential information for the target LLMs to respond with the expected answer. Moreover, we further consider a situation where the gradient is not visible to be compatible with any LLM. Our empirical evaluations show that IBProtector outperforms current defense methods in mitigating jailbreak attempts, without overly affecting response quality or inference speed. Its adaptability across various attack methods and target LLMs underscore the potential of IBProtector as a novel, transferable defense that bolsters the security of LLMs without requiring modifications to the underlying models.
+		</p>
+	<div class="figure" style="height: 256px; background-image: url('./Assets/intro.png');"></div>
+	<div class="question" style="text-align: center; font-size: 26px; font-style: italic; background-color: #dddddd; display: flex; justify-content: center; align-items: center;">
+    <br>
+    Current perturbations may not trigger defence jailbreaks.<br> Can we perturb adversarial prompts more effectively beyond mere randomness?
+ &ensp;
   </div>
-</section>
-<!-- End paper abstract -->
+	<div></div>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <h2 class="subtitle has-text-justified">
-		The random perturbations might not consistently target tokens triggering jailbreaks. Can we perturb adversarial prompts more effectively beyond mere randomness?
-      </h2>      <div class="item has-text-centered">
-      <img src="static/images/intro.png" alt="Teaser image" class="teaser-image" width="70%">
-      </div>
-    </div>
-  </div>
-</section>
+	
+		<h2>Highlights</h2>
+		<div class="figure-caption" style="margin-top: 0px;">
+			<p>
+				We propose <span style="font-weight: bolder; color: #c03d3e;">IBProtector</span>, the first LLM jailbreak defending method based on the Information Bottleneck principle
+in the perspective of information compression, and give a traceable objective function. The
+method is lightweight and requires no modifications to the LLMs. <span style="font-weight: bolder; color: #c03d3e;">IBProtector</span> is empirically generalizable to different attack strategies and
+target LLMs, highlighting its potential as a transferable defense mechanism. We evaluate <span style="font-weight: bolder; color: #c03d3e;">IBProtector</span> on token-level and prompt-level jailbreaking datasets. The results show that <span style="font-weight: bolder; color: #c03d3e;">IBProtector</span> can successfully defend against adversarial prompts without
+substantially affecting LLMs’ responsiveness and inference consumption.
+			</p>
+		</div>
+    <div class="figure" style="height: 320px; background-image: url('./Assets/model.png');"></div>
+    <div class="figure-caption" style="margin-top: -16px;">
+	</div><div class="hr"></div>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <h2 class="subtitle has-text-justified">
-Our framework of IBProtector, where fire and snowflake denote frozen and trained
-parameters, respectively, and the small language model is optional. Given an input prompt, the
-extractor can extract the most informative parts for the predictor to respond to.         </h2>      <div class="item has-text-centered">
-      <img src="static/images/model.png" alt="Teaser image" class="teaser-image" width="70%">
-      </div>
-    </div>
-  </div>
-</section>
+	
+		<div class="figure-caption">
+				Below, we show the main defense results and transferability that we consider.
+		</div>
+    <div class="figure" style="height: 280px; background-image: url('./Assets/table1.png');"></div>
+    <div class="figure" style="height: 200px; background-image: url('./Assets/table2.png');"></div>
+    <div class="figure" style="height: 200px; background-image: url('./Assets/fig4.png');"></div>
+	<div class="figure-caption">
+	IBProtector just passes a small model additionally, so it doesn't cause a lot of time overhead in the inference phase.
+	</div>
+	    <div class="figure" style="height: 280px; background-image: url('./Assets/time.png');"></div>
+	<div class="hr"></div>
 
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>@article{liu2024protecting,
-      title={Protecting Your LLMs with Information Bottleneck}, 
-      author={Zichuan Liu and Zefan Wang and Linjie Xu and Jinyu Wang and Lei Song and Tianchun Wang and Chunlin Chen and Wei Cheng and Jiang Bian},
-  journal={arXiv preprint arXiv:2404.13968},
-  year={2404}
-}
-</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
+	<h2>Citation</h2>
+	<div id="bibtex-text" class="bibtexsection">
+	@article{liu2024protecting,
+	      title={Protecting Your LLMs with Information Bottleneck}, 
+	      author={Zichuan Liu and Zefan Wang and Linjie Xu and Jinyu Wang
+	      	 and Lei Song and Tianchun Wang and Chunlin Chen and Wei Cheng and Jiang Bian},
+	      journal={arXiv preprint arXiv:2404.13968},
+	      year={2404}
+	}
+	</div>
+</div>
 
 
-<!-- Statcounter tracking code -->
-
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+<footer>
+<a href="https://zichuan-liu.github.io/projects/IBProtector/index.html/#top" class="bold">To Top ↑</a>
+</footer>
+<script src="chrome-extension://klbdahhocigoaoaanhoghblieoadfgcj/scripts/start.js"></script></body></html>
