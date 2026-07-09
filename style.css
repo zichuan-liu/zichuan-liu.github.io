@@ -79,18 +79,74 @@ a:hover {
   color: #1a365d;
 }
 
-/* Original table layout for header */
-.imgtable {
+/* Header Flexbox Layout */
+.imgtable, .imgtable tbody {
+  display: block;
   width: 100%;
   margin-bottom: 2em;
 }
 
-.imgtable td {
-  vertical-align: top;
+.imgtable tr {
+  display: flex;
+  align-items: center; /* Vertically centers the text and image */
+  justify-content: center; /* Centers the whole block horizontally */
+  gap: 35px; /* Added slightly more gap so it doesn't look cramped when centered */
 }
 
-.imgtable td:first-child {
-  width: 160px; /* Reserve space for an image if you add one */
+.imgtable td {
+  display: block;
+}
+
+.avatar-cell {
+  flex-shrink: 0; /* Prevents the avatar from shrinking */
+  perspective: 1000px; /* Required for 3D effect */
+  cursor: pointer;
+}
+
+/* Flip Container Styles */
+.flip-container {
+  width: 150px;
+  height: 150px;
+}
+
+.flipper {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.flip-container.is-flipped .flipper {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  border-radius: 50%; /* Ensure container respects the circular shape */
+}
+
+.front {
+  transform: rotateY(0deg);
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #1b4b72;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: block;
 }
 
 /* Responsive adjustments */
@@ -99,18 +155,28 @@ a:hover {
     margin: 20px auto;
   }
   
-  .imgtable, .imgtable tbody, .imgtable tr, .imgtable td {
+  .imgtable, .imgtable tbody {
     display: block;
     width: 100%;
   }
 
-  .imgtable td:first-child {
-    text-align: center;
-    margin-bottom: 15px;
+  .imgtable tr {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+
+  .imgtable td {
+    display: block;
     width: 100%;
   }
 
-  .imgtable td:first-child img {
+  .avatar-cell {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .avatar-cell img {
     margin: 0 auto !important;
   }
   
@@ -165,6 +231,10 @@ p {
 footer {
   margin-top: 4em;
   padding-top: 1em;
+  color: #718096;
+  font-size: 0.9em;
+  text-align: left;
+}  padding-top: 1em;
   color: #718096;
   font-size: 0.9em;
   text-align: left;
