@@ -184,15 +184,6 @@ a:hover {
     line-height: 2;
   }
 
-  .collaboration-callout {
-    align-items: stretch;
-    flex-direction: column;
-  }
-
-  .collaboration-callout .schedule-button {
-    width: 100%;
-    box-sizing: border-box;
-  }
 }
 
 ul {
@@ -288,6 +279,38 @@ p {
 .schedule-button:focus-visible {
   outline: 3px solid rgba(49, 130, 206, 0.32);
   outline-offset: 3px;
+}
+
+@media screen and (max-width: 600px) {
+  .collaboration-callout {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 9px;
+    margin: 0.65em 0 1em;
+    padding: 11px 12px 12px;
+    border-left-width: 3px;
+    border-radius: 7px;
+  }
+
+  .collaboration-callout p {
+    flex: none;
+    margin: 0;
+    font-size: 0.94em;
+    line-height: 1.35;
+  }
+
+  .collaboration-callout .schedule-button {
+    align-self: flex-start;
+    width: auto;
+    box-sizing: border-box;
+    min-height: 38px;
+    padding: 0 15px;
+    border-radius: 999px;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 0.78em;
+    letter-spacing: 0.01em;
+    box-shadow: 0 2px 6px rgba(27, 75, 114, 0.16);
+  }
 }
 
 footer {
