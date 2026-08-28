@@ -68,9 +68,24 @@
       <li> <b> Reinforcement Learning </b></li>
       </ul>
       <p>Especially in applications to multiple sequences and dynamic environments, enabling them to adapt to non-stationary distributions in the real world explicitly. Currently, I am working on next-generation foundation models.</p>
-<p style="background-color: #f7fafc; border: 1px solid #e2e8f0; border-left: 4px solid #3182ce; padding: 12px 16px; border-radius: 4px; margin-top: 1em;">
-  I love collaborating with others! If you're interested in working together, don't hesitate to reach out me! 😊😊
-</p>
+    <div class="collaboration-callout">
+      <p>I love collaborating with others! If you're interested in working together, don't hesitate to reach out to me! 😊</p>
+      <button
+        type="button"
+        class="schedule-button"
+        data-cal-link="zichuan-liu-3qxmet/research-chat"
+        data-cal-namespace="research-chat"
+        data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+      >
+        <i class="fa-regular fa-clock" aria-hidden="true"></i>
+        Schedule a 30-min chat
+      </button>
+      <span class="schedule-privacy">
+        <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+        Availability only
+      </span>
+    </div>
+
     <h2 id="experience">Work Experience</h2>
     <ul>
       <li><b>Apple</b>, AI/ML, Machine Learning Engineer, ICT 3 (07/2025 - 08/2026)<br>
@@ -249,6 +264,49 @@
         var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         var scrolled = (winScroll / height) * 100;
         document.getElementById("progressBar").style.width = scrolled + "%";
+      });
+    </script>
+    <script>
+      (function (C, A, L) {
+        var push = function (api, args) { api.q.push(args); };
+        var document = C.document;
+
+        C.Cal = C.Cal || function () {
+          var cal = C.Cal;
+          var args = arguments;
+
+          if (!cal.loaded) {
+            cal.ns = {};
+            cal.q = cal.q || [];
+            document.head.appendChild(document.createElement('script')).src = A;
+            cal.loaded = true;
+          }
+
+          if (args[0] === L) {
+            var api = function () { push(api, arguments); };
+            var namespace = args[1];
+            api.q = api.q || [];
+
+            if (typeof namespace === 'string') {
+              cal.ns[namespace] = api;
+              push(api, args);
+            } else {
+              push(cal, args);
+            }
+            return;
+          }
+
+          push(cal, args);
+        };
+      })(window, 'https://app.cal.com/embed/embed.js', 'init');
+
+      Cal('init', 'research-chat', { origin: 'https://cal.com' });
+      Cal.ns['research-chat']('ui', {
+        hideEventTypeDetails: false,
+        layout: 'month_view',
+        styles: {
+          branding: { brandColor: '#1b4b72' }
+        }
       });
     </script>
 </body>
