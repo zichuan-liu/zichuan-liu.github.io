@@ -256,17 +256,6 @@ p {
   margin: 0;
 }
 
-.schedule-privacy {
-  color: #607486;
-  font-size: 0.78em;
-  white-space: nowrap;
-}
-
-.schedule-privacy i {
-  margin-right: 4px;
-  color: #2f855a;
-}
-
 .schedule-button {
   appearance: none;
   display: inline-flex;
